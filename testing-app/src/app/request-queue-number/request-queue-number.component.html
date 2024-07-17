@@ -1,0 +1,39 @@
+<div mat-dialog-content>
+  <div
+    style="
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 400px;
+      padding: 12px;
+    "
+  >
+    <h2 style="margin-bottom: 8px">Raya Medika Hospital</h2>
+    <div
+      style="
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-top: 4px solid;
+        border-bottom: 4px solid;
+        width: 100%;
+        padding-block: 12px;
+      "
+    >
+      <h3>Nomor Antrian Anda</h3>
+      <h1 style="font-size: 80px">{{ data.queueNumber | uppercase }}</h1>
+      <h3 style="margin-bottom: 12px">Mohon Menunggu</h3>
+      <div>
+        <img [src]="barcodeImage" alt="barcode-image" />
+      </div>
+      <h3>
+        {{ data.date }}
+      </h3>
+    </div>
+
+    <h4 style="margin-top: 8px">Budayakan antri untuk kenyamanan bersama</h4>
+    <h4>Terimakasih atas kunjungan anda</h4>
+  </div>
+</div>

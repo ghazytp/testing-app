@@ -1,0 +1,25 @@
+<div
+  style="
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+  "
+>
+  <h1>{{ title }}</h1>
+  
+  <div fxLayout="row" fxLayoutGap="8px">
+    <div>
+      <button mat-button (click)="changePage('/')">Home</button>
+      <button mat-button (click)="changePage('input-visitor-details')">
+        Register Visitor
+      </button>
+      <button mat-button (click)="changePage('visitor-list')">
+        Visitor List
+      </button>
+    </div>
+    <button mat-flat-button color="accent" (click)="openDialog()">
+      Print Queue
+    </button>
+  </div>
+</div>

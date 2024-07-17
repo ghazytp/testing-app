@@ -1,0 +1,74 @@
+<div style="margin: auto; width: 80vw">
+  <app-navbar title="Register Visitor"></app-navbar>
+
+  <section style="padding: 12px; margin-top: 8px">
+    <form
+      #visitorForm="ngForm"
+      (ngSubmit)="registerUser(visitorForm)"
+      style="display: flex; flex-direction: column"
+    >
+      <mat-form-field appearance="outline">
+        <mat-label>Name</mat-label>
+        <input
+          ngModel
+          name="name"
+          required
+          matInput
+          placeholder="Enter your name"
+        />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input
+          ngModel
+          name="email"
+          required
+          matInput
+          placeholder="Enter your email"
+        />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Date</mat-label>
+        <input ngModel name="date" type="date" required matInput />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Age</mat-label>
+        <input
+          ngModel
+          name="age"
+          type="number"
+          matInput
+          placeholder="Enter your age"
+        />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Phone Number</mat-label>
+        <input
+          ngModel
+          name="phoneNumber"
+          type="text"
+          matInput
+          placeholder="Enter your phone number"
+        />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Adress</mat-label>
+        <textarea
+          ngModel
+          name="address"
+          matInput
+          placeholder="Enter your address"
+        ></textarea>
+      </mat-form-field>
+
+      <div style="display: flex; justify-content: end">
+        <button mat-flat-button color="primary">Register</button>
+      </div>
+    </form>
+  </section>
+</div>
